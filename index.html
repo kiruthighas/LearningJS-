@@ -1,0 +1,101 @@
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<head>
+    <style>
+        .form {
+            background: url(https://images.pexels.com/photos/904616/pexels-photo-904616.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500) no-repeat center fixed;
+            background-size: cover;
+            height: 100%;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            box-sizing: border-box;
+        }
+        
+        button {
+            background-color: darkblue;
+            color: white;
+            padding: 14px 20px;
+            margin: 12px 0;
+            cursor: pointer;
+            width: 25%;
+            text-align: center;
+        }
+        
+        .container {
+            position: absolute;
+            background: rgba(0, 0, 0, 0.5);
+            width: 25%;
+            text-align: bottom right;
+            bottom: 25px;
+            right: 20px;
+            padding: 15px;
+            margin: 25px;
+        }
+        
+        input[type=text],
+        input[type=password] {
+            width: 150px;
+            padding: 10px 10px;
+            display: inline-block;
+            border: 1px solid blue;
+        }
+    </style>
+
+    <body>
+        <div class="form">
+
+
+            <div class="container">
+
+                <h2>Login Form</h2>
+                <div id="error"></div>
+                <label for="username"><b>Username</b></label>
+                <input type="text" placeholder="Enter the username" name="username" id="username" required>
+                </br>
+                </br>
+                <label for="password"><b>Password</b></label>
+                <input type="password" placeholder="password" name="password" id="password" required>
+                </br>
+                <label>
+            <input type="checkbox" checked="checked" name="remember">Remember me
+        </label>
+                </br>
+                <button type="submit">Login</button>
+
+                <button type="button" class="cancelbtn">Cancel</button>
+            </div>
+
+
+
+        </div>
+        </div>
+        </form>
+        <script>
+            const name = document.getElementById('username')
+            const password = document.getElementById9('password')
+            const form = document.getElementById('form')
+            const errorElement = document.getElementById("error");
+
+            form.addEventListener('submit', (e) => {
+                let message = []
+                if (name == "" || name.value == null) {
+                    message.push("Name is Required")
+                }
+                if (message.length > 0) {
+                    e.preventDefault()
+                    errorElement.innerHTML = message.join(',')
+                }
+            })
+        </script>
+
+
+
+
+
+    </body>
+</head>
+
+</html>
